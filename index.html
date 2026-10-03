@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PMS Sécurité · Serrurier concessionnaire Fichet à Villeurbanne</title>
+<meta name="description" content="PMS Ducrest, serrurier et concessionnaire Fichet à Villeurbanne depuis 40 ans. Portes blindées, serrures, coffres-forts, contrôle d'accès. Dépannage 24h/24 et 7j/7 au 04 78 85 10 38.">
+<link rel="icon" href="img/cropped-PMS-Logo-2019-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#353535;
+  --graphite:#5a5a5a;
+  --concrete:#ececea;
+  --paper:#ffffff;
+  --orange:#e8501c;
+  --amber:#f39200;
+  --ink:#262626;
+  --line:#d6d6d3;
+  --brand:linear-gradient(90deg,var(--orange),var(--amber));
+  --display:"Saira",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+img{max-width:100%;display:block}
+section[id]{scroll-margin-top:76px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;color:var(--charcoal)}
+h2{font-size:clamp(1.9rem,3.6vw,2.75rem);font-weight:600;letter-spacing:-.01em}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0 0 1em}
+
+/* Barre urgence */
+.sos{background:var(--charcoal);color:#fff;font-size:.95rem}
+.sos .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px}
+.sos a{text-decoration:none;font-weight:600}
+.sos .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-right:8px;vertical-align:middle}
+.sos-hours{color:#cfcfcf}
+
+/* En-tête */
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo img{height:46px;width:auto}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-weight:500;color:var(--charcoal)}
+nav.main a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1 var(--body);text-decoration:none;padding:15px 22px;border-radius:2px;border:2px solid transparent;cursor:pointer}
+.btn-call{background:var(--orange);color:#fff}
+.btn-call:hover{background:#cf4416}
+.btn-ghost{border-color:var(--charcoal);color:var(--charcoal);background:transparent}
+.btn-ghost:hover{background:var(--charcoal);color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+.menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--charcoal)}
+
+/* Hero : le cadre ouvert du logo */
+.hero{padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end}
+.frame{position:relative;padding:56px 48px 52px 56px}
+/* cadre ouvert à gauche, comme le logo */
+.frame::before{content:"";position:absolute;inset:0;border:14px solid var(--charcoal);border-left:0;pointer-events:none}
+.frame::after{content:"";position:absolute;left:0;top:0;width:14px;height:22%;background:var(--charcoal)}
+.frame .post-bottom{position:absolute;left:0;bottom:0;width:14px;height:22%;background:var(--charcoal)}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:700;letter-spacing:-.02em;line-height:1.02;margin-bottom:28px;max-width:11ch}
+.hero h1 .s{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:1.2rem;color:var(--graphite);max-width:38ch;margin-bottom:32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.frame{animation:frameIn .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes frameIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+.showroom-card{background:var(--concrete);padding:28px}
+.showroom-card img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:22px;filter:saturate(.9)}
+.showroom-card h2{font-size:1.4rem;margin-bottom:12px}
+.showroom-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.98rem}
+.showroom-card dt{color:var(--graphite)}
+.showroom-card dd{margin:0;font-weight:500}
+
+/* Solutions */
+.solutions{background:var(--concrete);padding:96px 0}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:44px}
+.section-head p{color:var(--graphite);max-width:52ch;margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:2px solid var(--charcoal)}
+.tabs button{font:600 1.05rem/1.2 var(--display);background:none;border:0;padding:16px 22px;cursor:pointer;color:var(--graphite);position:relative}
+.tabs button[aria-selected="true"]{background:var(--charcoal);color:#fff}
+.tabs button:hover:not([aria-selected="true"]){color:var(--charcoal)}
+.panel{background:var(--paper);padding:44px 44px 36px}
+.panel[hidden]{display:none}
+.panel-intro{font-size:1.15rem;max-width:60ch;margin-bottom:34px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px 40px}
+.groups h3{font-size:1.1rem;padding-bottom:10px;margin-bottom:12px;border-bottom:3px solid;border-image:var(--brand) 1}
+.groups ul{list-style:none;margin:0;padding:0}
+.groups li{padding:5px 0;color:var(--ink)}
+.panel-foot{margin-top:38px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.panel-foot p{margin:0;color:var(--graphite)}
+
+/* Savoir-faire */
+.savoir{padding:104px 0}
+.savoir-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px}
+.savoir-text p{color:var(--graphite);max-width:56ch}
+.savoir-text h2{margin-bottom:24px}
+.promises{list-style:none;margin:0;padding:0;border-top:2px solid var(--charcoal)}
+.promises li{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+.promises strong{font:600 1.15rem/1.3 var(--display);color:var(--charcoal)}
+.promises span{color:var(--graphite)}
+
+/* Labels */
+.labels{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+.labels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.label img{height:76px;width:auto;object-fit:contain;margin-bottom:18px;mix-blend-mode:multiply}
+.label p{color:var(--graphite);font-size:.98rem;margin:0}
+.label h3{margin-bottom:6px}
+
+/* Contact */
+.contact{background:var(--charcoal);color:#e9e9e9;padding:100px 0 0}
+.contact h2{color:#fff;margin-bottom:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;padding-bottom:88px}
+.contact .lead{color:#cfcfcf;max-width:44ch;margin-bottom:34px}
+.big-phone{display:block;font:700 clamp(2.2rem,5vw,3.6rem)/1 var(--display);color:#fff;text-decoration:none;margin-bottom:10px;letter-spacing:-.01em}
+.big-phone:hover{color:var(--amber)}
+.contact .note{color:#bdbdbd;margin-bottom:34px}
+.contact .btn-ghost{border-color:#fff;color:#fff}
+.contact .btn-ghost:hover{background:#fff;color:var(--charcoal)}
+.visit h3{color:#fff;margin-bottom:14px}
+.visit address{font-style:normal;margin-bottom:20px;line-height:1.7}
+.hours{width:100%;border-collapse:collapse;margin-bottom:26px}
+.hours td{padding:9px 0;border-bottom:1px solid #4d4d4d}
+.hours td:last-child{text-align:right;color:#fff}
+.map{width:100%;height:240px;border:0;filter:grayscale(1) contrast(1.05)}
+
+footer{background:#2a2a2a;color:#a9a9a9;font-size:.92rem;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:#d6d6d6}
+
+/* Barre d'appel mobile */
+.mobile-call{display:none}
+
+@media (max-width:960px){
+  .hero-grid,.savoir-grid,.contact-grid,.section-head{grid-template-columns:1fr;gap:40px}
+  .labels-grid{grid-template-columns:1fr;gap:36px}
+  .promises li{grid-template-columns:1fr;gap:6px}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .sos-hours{display:none}
+  nav.main{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid var(--line);padding:8px 16px 16px}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px 0;width:100%}
+  nav.main .btn{display:none}
+  .menu-toggle{display:block}
+  .hero{padding:40px 0 56px}
+  .frame{padding:36px 22px 34px 30px}
+  .frame::before{border-width:9px;border-left:0}
+  .frame::after,.frame .post-bottom{width:9px}
+  .panel{padding:28px 20px}
+  .tabs button{padding:12px 14px;font-size:.98rem}
+  .solutions,.savoir{padding:64px 0}
+  .contact{padding-top:64px}
+  .mobile-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--orange);color:#fff;justify-content:center;align-items:center;gap:10px;padding:15px;font-weight:600;text-decoration:none}
+  .mobile-call svg{width:18px;height:18px}
+  body{padding-bottom:54px}
+}
+</style>
+</head>
+<body>
+
+<div class="sos">
+  <div class="wrap">
+    <a href="tel:0478851038"><span class="dot" aria-hidden="true"></span>Dépannage serrurerie 24h/24 et 7j/7 : 04 78 85 10 38</a>
+    <span class="sos-hours">Showroom ouvert du lundi au vendredi</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="PMS Sécurité, accueil"><img src="img/Logo-PMS-Noir.png" alt="PMS, façonnons ensemble votre sécurité" width="1255" height="762"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="main" id="nav">
+      <a href="#solutions">Nos solutions</a>
+      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#labels">Labels</a>
+      <a href="#contact">Showroom et contact</a>
+      <a class="btn btn-call" href="tel:0478851038">Appeler</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="frame">
+      <span class="post-bottom" aria-hidden="true"></span>
+      <h1>Façonnons ensemble votre <span class="s">sécurité.</span></h1>
+      <p class="lead">PMS Ducrest, serrurier et concessionnaire Fichet à Villeurbanne depuis 40 ans. Portes blindées, serrures, coffres-forts et contrôle d’accès dans toute la région lyonnaise.</p>
+      <div class="cta-row">
+        <a class="btn btn-call" href="tel:0478851038">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler le 04 78 85 10 38
+        </a>
+        <a class="btn btn-ghost" href="#contact">Demander un devis gratuit</a>
+      </div>
+    </div>
+
+    <aside class="showroom-card" aria-labelledby="showroom-title">
+      <img src="img/PMS-300X200_2.png" alt="Façade du showroom PMS Fichet, rue Michel Servet à Villeurbanne" width="300" height="200">
+      <h2 id="showroom-title">Notre showroom</h2>
+      <dl>
+        <dt>Adresse</dt><dd>30 rue Michel Servet, 69100 Villeurbanne</dd>
+        <dt>Métro</dt><dd>Gratte-Ciel, près de la mairie</dd>
+        <dt>Horaires</dt><dd>Lun. au ven., 8h–12h et 14h–18h</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="solutions" id="solutions" aria-labelledby="solutions-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="solutions-title">Une solution pour chaque lieu à protéger</h2>
+      <p>Du particulier en appartement à la copropriété entière, nous conseillons, posons et entretenons vos équipements de sécurité.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Nos clients">
+      <button role="tab" id="t-part" aria-controls="p-part" aria-selected="true">Particuliers</button>
+      <button role="tab" id="t-ent" aria-controls="p-ent" aria-selected="false" tabindex="-1">Entreprises et commerçants</button>
+      <button role="tab" id="t-coll" aria-controls="p-coll" aria-selected="false" tabindex="-1">Collectivités</button>
+      <button role="tab" id="t-reg" aria-controls="p-reg" aria-selected="false" tabindex="-1">Régies et copropriétés</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-part" aria-labelledby="t-part">
+      <p class="panel-intro">Des solutions complètes pour sécuriser votre appartement ou votre maison, de la porte d’entrée au coffre-fort.</p>
+      <div class="groups">
+        <div><h3>Fermeture</h3><ul><li>Porte blindée Fichet</li><li>Blindage de porte</li><li>Portes de cave ou de service Fichet</li><li>Porte de garage sécurisée</li><li>Portail aluminium</li><li>Motorisation de fermeture</li><li>Fenêtres et volets roulants</li></ul></div>
+        <div><h3>Serrurerie</h3><ul><li>Serrures Fichet</li><li>Serrures toutes marques</li><li>Cylindres</li></ul></div>
+        <div><h3>Alarme</h3><ul><li>Alarme</li><li>Vidéosurveillance</li><li>Générateur de fumée</li></ul></div>
+        <div><h3>Coffres</h3><ul><li>Coffre-fort</li><li>Coffre ignifuge</li><li>Armoire forte</li><li>Coffret de discrétion</li></ul></div>
+      </div>
+      <div class="panel-foot"><p>Une porte claquée, une serrure forcée ? Nous intervenons jour et nuit.</p><a class="btn btn-call" href="tel:0478851038">Appeler le dépannage</a></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-ent" aria-labelledby="t-ent" hidden>
+      <p class="panel-intro">Un interlocuteur unique pour toutes les questions de sécurité de votre entreprise ou de votre commerce.</p>
+      <div class="groups">
+        <div><h3>Fermeture</h3><ul><li>Rideaux métalliques</li><li>Serrures</li><li>Porte d’allée</li><li>Cylindres à organigramme</li></ul></div>
+        <div><h3>Contrôle d’accès</h3><ul><li>Digicodes</li><li>Vigik</li><li>Accès Salto</li><li>Lecteurs de badge et de carte</li><li>Interphone et visiophone</li></ul></div>
+        <div><h3>Alarme</h3><ul><li>Alarme et télésurveillance</li><li>Vidéosurveillance</li></ul></div>
+        <div><h3>Coffres</h3><ul><li>Coffres-forts ignifuges</li><li>Armoires fortes</li></ul></div>
+      </div>
+      <div class="panel-foot"><p>Bilan et audit de sécurité gratuits pour vos locaux.</p><a class="btn btn-ghost" href="#contact">Demander un audit</a></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-coll" aria-labelledby="t-coll" hidden>
+      <p class="panel-intro">Notre offre globale vous fait bénéficier de 40 ans d’expérience auprès des collectivités de la région lyonnaise.</p>
+      <div class="groups">
+        <div><h3>Fermeture</h3><ul><li>Rideaux métalliques</li><li>Serrures et cylindres à organigramme</li></ul></div>
+        <div><h3>Contrôle d’accès</h3><ul><li>Digicodes et Vigik</li><li>Lecteurs de badge</li><li>Interphone et visiophone</li></ul></div>
+        <div><h3>Alarme</h3><ul><li>Alarme et télésurveillance</li><li>Vidéosurveillance</li></ul></div>
+        <div><h3>Coffres</h3><ul><li>Coffres ignifuges</li><li>Armoires fortes</li></ul></div>
+      </div>
+      <div class="panel-foot"><p>Étude, devis et pose adaptés aux marchés publics.</p><a class="btn btn-ghost" href="#contact">Nous consulter</a></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-reg" aria-labelledby="t-reg" hidden>
+      <p class="panel-intro">Audit et diagnostic gratuits, conseil, intervention et travaux pour vos immeubles.</p>
+      <div class="groups">
+        <div><h3>Fermeture</h3><ul><li>Porte d’allée</li><li>Portes de cave</li><li>Porte de garage sécurisée</li><li>Cylindres à organigramme</li></ul></div>
+        <div><h3>Contrôle d’accès</h3><ul><li>Digicodes</li><li>Vigik</li><li>Accès Salto</li><li>Interphone et visiophone</li></ul></div>
+        <div><h3>Surveillance</h3><ul><li>Vidéosurveillance</li><li>Alarme</li></ul></div>
+      </div>
+      <div class="panel-foot"><p>Un diagnostic gratuit de vos parties communes.</p><a class="btn btn-ghost" href="#contact">Planifier un diagnostic</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="savoir" id="savoir-faire" aria-labelledby="savoir-title">
+  <div class="wrap savoir-grid">
+    <div class="savoir-text">
+      <h2 id="savoir-title">40 ans de serrurerie à Villeurbanne</h2>
+      <p>Depuis 40 ans, nous protégeons les appartements, pavillons, copropriétés, entreprises et collectivités de la région lyonnaise. Nous sommes votre concessionnaire Fichet à Villeurbanne.</p>
+      <p>Notre équipe de professionnels qualifiés vous conseille et intervient dans les délais les plus courts. Venez nous voir au cœur des Gratte-Ciel : nous ferons de votre maison ou de votre bureau un lieu confortable et sécurisé.</p>
+    </div>
+    <ul class="promises">
+      <li><strong>Conseil gratuit</strong><span>Bilan, audit et diagnostic offerts pour tous vos projets de sécurité des personnes et des biens.</span></li>
+      <li><strong>Produits certifiés</strong><span>Portes blindées, serrures, coffres-forts et contrôle d’accès Fichet et grandes marques, certifiés A2P.</span></li>
+      <li><strong>Pose soignée</strong><span>Installation par nos techniciens, avec un seul interlocuteur du devis à la mise en service.</span></li>
+      <li><strong>Dépannage 24h/24</strong><span>Ouverture de porte, serrure forcée ou cassée : nous intervenons jour et nuit, 7 jours sur 7.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="labels" id="labels" aria-label="Labels et réseaux">
+  <div class="wrap labels-grid">
+    <div class="label">
+      <img src="img/PFF_logo_gris.png" alt="Fichet" width="1648" height="666" loading="lazy">
+      <h3>Concessionnaire Fichet</h3>
+      <p>Revendeur et installateur agréé des portes, serrures et coffres Fichet.</p>
+    </div>
+    <div class="label">
+      <img src="img/norme-A2P.png" alt="Certification A2P" width="400" height="250" loading="lazy">
+      <h3>Normes A2P</h3>
+      <p>La marque de qualité reconnue par les assureurs pour la résistance à l’effraction.</p>
+    </div>
+    <div class="label">
+      <img src="img/PMS-Ducrest-Membre-reseau-Proxeo.png" alt="Membre du réseau Proxeo" width="400" height="250" loading="lazy">
+      <h3>Réseau Proxeo</h3>
+      <p>Un réseau primé pour la qualité de service de ses professionnels de la sécurité.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="contact-title">Parlons de votre projet</h2>
+      <p class="lead">Un devis, un conseil ou une urgence : appelez-nous, nous vous répondons directement.</p>
+      <a class="big-phone" href="tel:0478851038">04 78 85 10 38</a>
+      <p class="note">Dépannage serrurerie 24h/24 et 7j/7</p>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=30+rue+Michel+Servet+69100+Villeurbanne" target="_blank" rel="noopener">Itinéraire vers le showroom</a>
+    </div>
+    <div class="visit">
+      <h3>Showroom PMS Ducrest</h3>
+      <address>30 rue Michel Servet<br>69100 Villeurbanne<br>Métro A : Gratte-Ciel</address>
+      <table class="hours">
+        <tr><td>Lundi au vendredi</td><td>8h00–12h00 et 14h00–18h00</td></tr>
+        <tr><td>Samedi et dimanche</td><td>Fermé (dépannage assuré)</td></tr>
+      </table>
+      <iframe class="map" title="Plan d'accès au showroom" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=30%20rue%20Michel%20Servet%2069100%20Villeurbanne&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© PMS Ducrest, Procédés Modernes de Sécurité · Villeurbanne</span>
+    <a href="https://www.pms-securite.fr/politique-de-confidentialite/">Politique de confidentialité</a>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:0478851038">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  Appeler 24h/24 : 04 78 85 10 38
+</a>
+
+<script>
+// Onglets accessibles
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function select(tab){
+  tabs.forEach(t=>{
+    const on=t===tab;
+    t.setAttribute('aria-selected',on);
+    t.tabIndex=on?0:-1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+  });
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click',()=>select(t));
+  t.addEventListener('keydown',e=>{
+    const d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+    if(!d)return;
+    const n=tabs[(i+d+tabs.length)%tabs.length];
+    select(n);n.focus();
+  });
+});
+// Menu mobile
+const toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('nav');
+toggle.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded',open);
+});
+nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded',false);}});
+</script>
+</body>
+</html>
